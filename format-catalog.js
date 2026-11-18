@@ -3,11 +3,11 @@ import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
 
-// get __dirname (ES module doesn't have __dirname by default)
+// Get __dirname (ES modules do not have __dirname by default)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// 💡 read .env.local
+// Read .env.local
 dotenv.config({ path: path.join(__dirname, ".env.local") });
 
 // =================== 🔑  HackMD API Token ===================
@@ -15,15 +15,17 @@ const HACKMD_API_TOKEN = process.env.HACKMD_API_TOKEN;
 // ===================================================================
 
 async function fetchAndFormatCatalog() {
-  if (!HACKMD_API_TOKEN || HACKMD_API_TOKEN.includes("你的")) {
-    console.error("❌ 請先在腳本上方填入你真實的 HackMD API Token！");
+  if (!HACKMD_API_TOKEN) {
+    console.error(
+      "❌ Please set your valid HACKMD_API_TOKEN in .env.local first!",
+    );
     return;
   }
 
-  console.log("📡 正在從 HackMD 官方 API 擷取全部文章清單...");
+  console.log("📡 Fetching full note list from the official HackMD API...");
 
   try {
-    // 💡 呼叫官方標準 API 端點
+    // Call the official standard API endpoint
     const response = await fetch("https://api.hackmd.io/v1/notes", {
       method: "GET",
       headers: {
@@ -34,18 +36,20 @@ async function fetchAndFormatCatalog() {
 
     if (!response.ok) {
       throw new Error(
-        `HTTP 錯誤！狀態碼: ${response.status} (${response.statusText})`,
+        `HTTP Error! Status code: ${response.status} (${response.statusText})`,
       );
     }
 
     const rawNotes = await response.json();
-    console.log(`📥 成功抓取！共收到 ${rawNotes.length} 篇原始筆記數據。`);
+    console.log(
+      `📥 Fetch successful! Received ${rawNotes.length} raw note records.`,
+    );
 
-    // 💡 根據你查到的官方 Doc 格式進行精準萃取
+    // Extract fields based on the official API documentation format
     const cleanCatalog = rawNotes
       .map((note) => {
-        // 優先拿 permalink 或 publishLink，都沒有就用 id 拼湊
-        let finalUrl = note.permalink || note.publishLink || note.id;
+        // Prioritize permalink or publishLink; fallback to constructing the URL with id
+        let finalUrl = note.permalink || note.publishLink;
         console.log(
           `Permalink: ${note.permalink}, PublishLink: ${note.publishLink}, ShortId: ${note.shortId}, Id: ${note.id}, UserPath: ${note.userPath}`,
         );
@@ -54,26 +58,24 @@ async function fetchAndFormatCatalog() {
         }
 
         return {
-          title: note.title || "未命名文章",
+          title: note.title || "Untitled Note",
           url: finalUrl || "",
         };
       })
-      .filter((item) => item.url !== ""); // 過濾掉完全沒有網址的髒資料
+      .filter((item) => item.url !== ""); // Filter out invalid entries without a URL
 
-    // 💡 寫入成我們 clean-local.js 認得的地圖檔
+    // Write output to the catalog file expected by clean-local.js
     fs.writeFileSync(
       path.join(__dirname, "./hackmd_catalog.json"),
       JSON.stringify(cleanCatalog, null, 2),
       "utf-8",
     );
 
-    console.log(`\n🎉 完美的網址對照表已建置完成！`);
-    console.log(
-      `💾 成功將 ${cleanCatalog.length} 篇文章儲存至 hackmd_catalog.json`,
-    );
+    console.log(`\n🎉 URL catalog built successfully!`);
+    console.log(`💾 Saved ${cleanCatalog.length} notes to hackmd_catalog.json`);
   } catch (error) {
     console.error(
-      "❌ 抓取或格式化失敗，請檢查 Token 是否正確：",
+      "❌ Failed to fetch or format catalog. Please verify your Token:",
       error.message,
     );
   }
