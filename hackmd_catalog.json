@@ -1,0 +1,886 @@
+[
+  {
+    "title": "[Concept] Map 與 Set：JavaScript / TypeScript 的雜湊式資料結構 - 筆記",
+    "url": "https://hackmd.io/@yy933/S1KrgysRzg"
+  },
+  {
+    "title": "[Concept] 為什麼需要驗證 Input？用 Zod 做執行期資料驗證 - 筆記",
+    "url": "https://hackmd.io/@yy933/SJD__bX0Gg"
+  },
+  {
+    "title": "Hydration Mismatch 解決方式 - 筆記",
+    "url": "https://hackmd.io/@yy933/H1vKdIXhMl"
+  },
+  {
+    "title": "Pass by Value vs. Pass by Reference (傳值與傳址) - 筆記",
+    "url": "https://hackmd.io/@yy933/HJ0d4i39zx"
+  },
+  {
+    "title": "JavaScript 非同步處理、Promise 與 Async/Await - 筆記",
+    "url": "https://hackmd.io/@yy933/SkSJ3wqqMx"
+  },
+  {
+    "title": "JavaScript 數字處理陷阱 - 筆記",
+    "url": "https://hackmd.io/@yy933/B124a89cze"
+  },
+  {
+    "title": "響應式網頁設計 (Responsive Web Design, RWD) - 筆記",
+    "url": "https://hackmd.io/@yy933/S1ClfB5cGg"
+  },
+  {
+    "title": "[CSS] CSS Flexbox vs. CSS Grid 差異 - 筆記",
+    "url": "https://hackmd.io/@yy933/HyAKqN5qGx"
+  },
+  {
+    "title": "[CSS] Sass、Tailwind CSS - 筆記",
+    "url": "https://hackmd.io/@yy933/SkgMTUYqze"
+  },
+  {
+    "title": "[CSS] CSS 選擇器、權重計算與偽類/偽元素 - 筆記",
+    "url": "https://hackmd.io/@yy933/B13tMft9fe"
+  },
+  {
+    "title": "[Project Management] Agile 與 Scrum 團隊協作流程 - 筆記",
+    "url": "https://hackmd.io/@yy933/ByPw1ftqfg"
+  },
+  {
+    "title": "Git Merge vs Git Rebase 差異與使用時機 - 筆記",
+    "url": "https://hackmd.io/@yy933/rJQTXgF5zl"
+  },
+  {
+    "title": "Git 版本控制與常用指令 - 筆記",
+    "url": "https://hackmd.io/@yy933/BJ7h-lt9Gx"
+  },
+  {
+    "title": "JavaScript ES6 Destructuring Assignment (解構賦值) - 筆記",
+    "url": "https://hackmd.io/@yy933/BkXe51Fqzl"
+  },
+  {
+    "title": "JavaScript Spread vs Rest Operator (ES6 展開運算子與其餘運算子) - 筆記",
+    "url": "https://hackmd.io/@yy933/rJYh3G-9Mx"
+  },
+  {
+    "title": "JavaScript Data Types (資料型別與結構) - 筆記",
+    "url": "https://hackmd.io/@yy933/SylUBzZqGg"
+  },
+  {
+    "title": "JavaScript undefined vs null - 筆記",
+    "url": "https://hackmd.io/@yy933/ryZvRbWcMl"
+  },
+  {
+    "title": "JavaScript Double Equals (==) vs Triple Equals (===) - 筆記",
+    "url": "https://hackmd.io/@yy933/ByD5-1-5fl"
+  },
+  {
+    "title": "JavaScript Falsy Values（假值/虛值） - 筆記",
+    "url": "https://hackmd.io/@yy933/HJdJyyb9Ge"
+  },
+  {
+    "title": "前端框架觀念：其他 React 面試題  - 筆記",
+    "url": "https://hackmd.io/@yy933/SkHwahyqMl"
+  },
+  {
+    "title": "前端框架觀念：React Context API - 筆記",
+    "url": "https://hackmd.io/@yy933/ByunPhk5Mg"
+  },
+  {
+    "title": "前端框架觀念：React `useRef` Hook - 筆記.md",
+    "url": "https://hackmd.io/@yy933/r1GzSetyczl"
+  },
+  {
+    "title": "前端框架觀念：React 的特性與限制 - 筆記.md",
+    "url": "https://hackmd.io/@yy933/BJXzreYy9Mx"
+  },
+  {
+    "title": "前端架構觀念：Virtual DOM vs. Shadow DOM - 筆記.md",
+    "url": "https://hackmd.io/@yy933/H1lfBeKk5zg"
+  },
+  {
+    "title": "前端元件觀念：Function Component vs. Class Component - 筆記.md",
+    "url": "https://hackmd.io/@yy933/ByMBeY19fg"
+  },
+  {
+    "title": "前端框架觀念：React useEffect Hook 與運作機制 - 筆記.md",
+    "url": "https://hackmd.io/@yy933/SJLMHlKJczx"
+  },
+  {
+    "title": "前端框架觀念：JSX 的本質與 Element vs. Component - 筆記.md",
+    "url": "https://hackmd.io/@yy933/Bk-fHltk9zx"
+  },
+  {
+    "title": "前端框架觀念：React Props - 筆記.md",
+    "url": "https://hackmd.io/@yy933/SJEzHxY15Mg"
+  },
+  {
+    "title": "前端框架觀念：React State 與 Lifecycle（生命週期）- 筆記.md",
+    "url": "https://hackmd.io/@yy933/ryHMrxt15Gg"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 9) - OpenAI Beta 簡化工具呼叫 (runTools)",
+    "url": "https://hackmd.io/@yy933/BJmwkAIdfl"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 8) - 工具參數解析 (Function Arguments) 與真實 API 整合",
+    "url": "https://hackmd.io/@yy933/S19MRoU_Gx"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 7) - 實作 OpenAI Tools API 迴圈與多重工具呼叫",
+    "url": "https://hackmd.io/@yy933/BkZ-tOU_Ge"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 6) - 從手動 ReAct 轉向 OpenAI 原生 Tools API (Function Calling)",
+    "url": "https://hackmd.io/@yy933/H1KB3DUOMe"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 5) - 封裝 Agent 自動化迭代迴圈與終止條件",
+    "url": "https://hackmd.io/@yy933/HkN_nuHOfl"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 4) - 解析 Action 與 Agent 迴圈流程控制",
+    "url": "https://hackmd.io/@yy933/Sk0hw8SdGg"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 3) - Agent Loop 運作機制與無狀態特性",
+    "url": "https://hackmd.io/@yy933/Syf00Mr_Gx"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 2) - 設計 ReAct Prompt",
+    "url": "https://hackmd.io/@yy933/SkF5yN4OMx"
+  },
+  {
+    "title": "[AI Engineering] ReAct 模式與 AI Agent 開發策略 (Part 1)",
+    "url": "https://hackmd.io/@yy933/Bk3gZmN_Gl"
+  },
+  {
+    "title": "[AI Engineering] AI Agent 基礎觀念",
+    "url": "https://hackmd.io/@yy933/rJTPnZV_Gx"
+  },
+  {
+    "title": "[AI Engineering] 使用 Google Gemini API 生成 Text Embedding (向量)",
+    "url": "https://hackmd.io/@yy933/S1Gn_QTDMl"
+  },
+  {
+    "title": "[AI Engineering] 語意搜尋(Semantic Search)與 RAG (Retrieval-Augmented Generation)",
+    "url": "https://hackmd.io/@yy933/By8Q0Tcwfg"
+  },
+  {
+    "title": "[AI Engineering] 向量嵌入 (Embeddings) 與向量資料庫",
+    "url": "https://hackmd.io/@yy933/B1p8D9FDzg"
+  },
+  {
+    "title": "[React.js - Next.js] App Router 中結合 Search 與 Sort 的 URL 狀態管理 - 筆記",
+    "url": "https://hackmd.io/@yy933/BJf5bbMDfl"
+  },
+  {
+    "title": "[Next.js] App Router 中 searchParams 的完整解析與實務應用 - 筆記",
+    "url": "https://hackmd.io/@yy933/H1fBAb5UGx"
+  },
+  {
+    "title": "[React.js - Next.js] 程式碼如何影響 Next.js 的渲染策略（SSG, ISR, SSR） - 筆記",
+    "url": "https://hackmd.io/@yy933/HyQb_OtIzg"
+  },
+  {
+    "title": "[React.js - Next.js] Next.js 的渲染策略（Rendering Strategies）：SSG、ISR 與 SSR - 筆記",
+    "url": "https://hackmd.io/@yy933/HyHDHwu8Gg"
+  },
+  {
+    "title": "[React.js - Next.js] 理解 Next.js 中的 Client Boundary與設計選擇 - 筆記",
+    "url": "https://hackmd.io/@yy933/Bk6zBIOLfx"
+  },
+  {
+    "title": "[React - Next.js] Next.js 中的 Server Component vs. Client Component - 筆記",
+    "url": "https://hackmd.io/@yy933/rJB-icWfll"
+  },
+  {
+    "title": "[React - Next.js] Next.js 圖片最佳化處理 - 筆記",
+    "url": "https://hackmd.io/@yy933/r19Q9D1Mex"
+  },
+  {
+    "title": "[React - Next.js] Next.js Google Fonts 最佳化處理 - 筆記",
+    "url": "https://hackmd.io/@yy933/SylIMO1feg"
+  },
+  {
+    "title": "[React, Next.js, TypeScript] 在本地環境建立 Next.js 開發環境 (Cheatsheet)",
+    "url": "https://hackmd.io/@yy933/SJMGjf4Glx"
+  },
+  {
+    "title": "[TypeScript, Express.js] Request 與 Response 泛型",
+    "url": "https://hackmd.io/@yy933/SyFUGmQIfg"
+  },
+  {
+    "title": "[TypeScript, Express.js] 建立 TypeScript + Express專案的步驟 (cheatsheet)",
+    "url": "https://hackmd.io/@yy933/H1HbU6b8Ml"
+  },
+  {
+    "title": "[TypeScript, React.js, Vite] Vite + React 專案無痛遷移至 TypeScript 指南",
+    "url": "https://hackmd.io/@yy933/BJPzOFb8Ge"
+  },
+  {
+    "title": "[TypeScript] Generics Constraints（泛型約束 extends）與 keyof 應用",
+    "url": "https://hackmd.io/@yy933/SJ-7uKlUMg"
+  },
+  {
+    "title": "[TypeScript] Generics (泛型) 基礎介紹與應用 - 筆記",
+    "url": "https://hackmd.io/@yy933/Bk2rgS18Gx"
+  },
+  {
+    "title": "[TypeScript] 泛型介面 (Generic Interfaces) 與 泛型別名 (Generic Type Aliases) - 筆記",
+    "url": "https://hackmd.io/@yy933/rk-I_Fx8Gg"
+  },
+  {
+    "title": "[TypeScript] TypeScript 定義 Function（函式）型別: Function Overloads（函式過載）",
+    "url": "https://hackmd.io/@yy933/S1wmXKlLMg"
+  },
+  {
+    "title": "[TypeScript] TypeScript 定義 Function（函式）型別的 4 種常用方法",
+    "url": "https://hackmd.io/@yy933/B1UjnulIze"
+  },
+  {
+    "title": "[TypeScript, React.js] React Functional Component 型別標註：JSX.Element vs React.FC ",
+    "url": "https://hackmd.io/@yy933/B1TziPxUfl"
+  },
+  {
+    "title": "[TypeScript, React.js] useState 搭配 TypeScript 的型別標註與泛型 (Generics) ",
+    "url": "https://hackmd.io/@yy933/SkwVKVeLfe"
+  },
+  {
+    "title": " [TypeScript] 還不確定型別的時候，應該用Generics (泛型) 或是 unknown？",
+    "url": "https://hackmd.io/@yy933/BkD0BrkIGl"
+  },
+  {
+    "title": "[TypeScript] Narrowing - 筆記",
+    "url": "https://hackmd.io/@yy933/SyRNV5Szxe"
+  },
+  {
+    "title": "[TypeScript] Utility Types : Omit、Partial、Pick、Required、Readonly、Record、Exclude、NonNullable, Extract, ReturnType",
+    "url": "https://hackmd.io/@yy933/rkTWZaczle"
+  },
+  {
+    "title": "[TypeScript - Types] any, unknown, void 型別 - 筆記",
+    "url": "https://hackmd.io/@yy933/S1O4WQ18Gx"
+  },
+  {
+    "title": "[Supabase] Supabase 登入驗證流程解析",
+    "url": "https://hackmd.io/@yy933/BJts7ddrGl"
+  },
+  {
+    "title": "[Supabase / Database] RLS 權限漏洞與資料庫架構重構 - 實作 Part 6：SQL Join 聚合查詢與 Header UI 優化 (完結篇)",
+    "url": "https://hackmd.io/@yy933/HycOiW8HGe"
+  },
+  {
+    "title": "[Supabase / Database] RLS 權限漏洞與資料庫架構重構 - 實作 Part 5：Form 表單重構與 UX 角色權限限制",
+    "url": "https://hackmd.io/@yy933/B1yp_W8Bfg"
+  },
+  {
+    "title": "[Supabase / Database] RLS 權限漏洞與資料庫架構重構 - 實作 Part 4： AuthContext 狀態同步與全域 User Profiles 管理",
+    "url": "https://hackmd.io/@yy933/BkD4g1UHfe"
+  },
+  {
+    "title": "[Supabase / Database] RLS 權限漏洞與資料庫架構重構 - 實作 Part 3： sales_deals 資料表重構與新增 INSERT RLS Policies",
+    "url": "https://hackmd.io/@yy933/ByaXMoBSMl"
+  },
+  {
+    "title": "[Supabase / Database] RLS 權限漏洞與資料庫架構重構 - 實作 Part 2：撰寫 Database Trigger 自動同步 User Profiles",
+    "url": "https://hackmd.io/@yy933/HJQQxhVHGl"
+  },
+  {
+    "title": "[Supabase / Database] RLS 權限漏洞與資料庫架構重構 - 實作 Part 1：建立 user_profiles 資料表與 RLS Policy 設定",
+    "url": "https://hackmd.io/@yy933/rkpMdi4SMx"
+  },
+  {
+    "title": "[Supabase / Database] RLS 權限漏洞與資料庫架構重構 - 說明",
+    "url": "https://hackmd.io/@yy933/BJ8TG94SMe"
+  },
+  {
+    "title": "[Database / Supabase] 行級安全性 (Row Level Security, RLS) 核心觀念筆記",
+    "url": "https://hackmd.io/@yy933/r1hhwS4BMl"
+  },
+  {
+    "title": "[React.js, Supabase] React 19 + Supabase Auth 登入完整流程 - 筆記",
+    "url": "https://hackmd.io/@yy933/B19Og6-Bfx"
+  },
+  {
+    "title": "[Supabase] anon key 與 RLS (Row Level Security) - 筆記",
+    "url": "https://hackmd.io/@yy933/HJe25cgSGx"
+  },
+  {
+    "title": "[Supabase] Realtime Subscription (即時訂閱) - 筆記",
+    "url": "https://hackmd.io/@yy933/Skw8DU1Sfg"
+  },
+  {
+    "title": "[React.js - Forms] useActionState - 筆記",
+    "url": "https://hackmd.io/@yy933/ryhLoBkSMg"
+  },
+  {
+    "title": "[React.js - Router] 跨頁面狀態傳遞：useLocation 與 Link state - 筆記",
+    "url": "https://hackmd.io/@yy933/H1szzTpNzl"
+  },
+  {
+    "title": "[React.js - Router] 父子路由之間的資料橋樑：useOutletContext - 筆記",
+    "url": "https://hackmd.io/@yy933/HyEs8ch4Ml"
+  },
+  {
+    "title": "[React.js - Router] 如何決定是否使用 Nested Routes？- 筆記",
+    "url": "https://hackmd.io/@yy933/Sy-0MmYNGl"
+  },
+  {
+    "title": "[React.js - Router] Index Route - 筆記",
+    "url": "https://hackmd.io/@yy933/SkSKxAu4fg"
+  },
+  {
+    "title": "[React.js - Router] Nested Route - 筆記",
+    "url": "https://hackmd.io/@yy933/rkeeVpdv4Gl"
+  },
+  {
+    "title": "[React.js - Performance]  useCallback - 筆記",
+    "url": "https://hackmd.io/@yy933/By9r5EL4fg"
+  },
+  {
+    "title": "[React.js - Performance] 利用 React.memo、useMemo 提升效能 - 筆記",
+    "url": "https://hackmd.io/@yy933/B1W4qPXVfg"
+  },
+  {
+    "title": "[React.js - Performance] Code Splitting、React.lazy 與 Suspense - 筆記",
+    "url": "https://hackmd.io/@yy933/H1xAT8XEfe"
+  },
+  {
+    "title": "[React.js - Concept] React re-rendering究竟發生什麼事？從 State 改變到畫面渲染的四大階段 - 筆記",
+    "url": "https://hackmd.io/@yy933/r1irnR-4Gg"
+  },
+  {
+    "title": "[React.js - Concept] React Strict Mode - 筆記",
+    "url": "https://hackmd.io/@yy933/HkTrSGMEGx"
+  },
+  {
+    "title": "[React.js - Pattern] React 進階設計模式：Recursive Rendering (遞迴渲染) - 筆記",
+    "url": "https://hackmd.io/@yy933/rkhnm0WVMx"
+  },
+  {
+    "title": "[React.js - Pattern] React 進階設計模式：Render Props - 筆記",
+    "url": "https://hackmd.io/@yy933/HknnqdyEGg"
+  },
+  {
+    "title": "[React - Pattern] 什麼是 noop function？ - 筆記",
+    "url": "https://hackmd.io/@yy933/H117vmAmzx"
+  },
+  {
+    "title": "[React - Hooks] 什麼是 useId？ - 筆記",
+    "url": "https://hackmd.io/@yy933/ByuDCyp7fg"
+  },
+  {
+    "title": "[React.js] React 的 Context API - 跨元件狀態共享的神器 - 筆記",
+    "url": "https://hackmd.io/@yy933/By4y9y6QMg"
+  },
+  {
+    "title": "[React - Design Pattern] 什麼是Headless Component？ - 筆記",
+    "url": "https://hackmd.io/@yy933/H1q-IyTmfx"
+  },
+  {
+    "title": "[Testing] TDD (Test-Driven Development) 測試驅動開發 - 筆記",
+    "url": "https://hackmd.io/@yy933/HyWYJV9mMe"
+  },
+  {
+    "title": "[React.js - Design Pattern] Implicit State - 筆記",
+    "url": "https://hackmd.io/@yy933/SyX4jjsXGx"
+  },
+  {
+    "title": "[React.js] 什麼是Props Drilling？ - 筆記",
+    "url": "https://hackmd.io/@yy933/r16UOtimfl"
+  },
+  {
+    "title": "[React - Testing] 什麼是程式碼覆蓋率 (Code Coverage)？ - 筆記",
+    "url": "https://hackmd.io/@yy933/HkTwnlc7zg"
+  },
+  {
+    "title": "[React - Testing] 自動化測試的3A 模式：Arrange-Act-Assert - 筆記",
+    "url": "https://hackmd.io/@yy933/BkvRjltQGe"
+  },
+  {
+    "title": "[React - Testing] 撰寫 React Testing Library 測試的關鍵好習慣與進階心法 - 筆記",
+    "url": "https://hackmd.io/@yy933/BybfvgFmzl"
+  },
+  {
+    "title": "[React - Testing] 在 Vite 專案中建立 Vitest 與 React Testing Library 測試環境 - 筆記",
+    "url": "https://hackmd.io/@yy933/rkY5_2umzx"
+  },
+  {
+    "title": "[React.js] React 的 Lazy State Initialization - 筆記",
+    "url": "https://hackmd.io/@yy933/rkrqVeZmzx"
+  },
+  {
+    "title": "[React.js] useEffect的Cleanup function - 筆記",
+    "url": "https://hackmd.io/@yy933/B1gqfukXMx"
+  },
+  {
+    "title": "[React.js] 從 Functional Programming 談 React 的state與side effect - 筆記",
+    "url": "https://hackmd.io/@yy933/BJhtuhoMfe"
+  },
+  {
+    "title": "[JavaScript / ES6] 動態屬性名稱（Computed Property Names）與 React useState - 筆記",
+    "url": "https://hackmd.io/@yy933/ry55BtjfGe"
+  },
+  {
+    "title": "[React.js] 應用 useState 時的常見錯誤 - 筆記",
+    "url": "https://hackmd.io/@yy933/S1yIlFLzGg"
+  },
+  {
+    "title": "[React.js] React Hook：useState 狀態管理機制 - 筆記",
+    "url": "https://hackmd.io/@yy933/rJai9uUzMx"
+  },
+  {
+    "title": "[React.js] 掌握 React 中的資料流：Props 與 State 核心概念 - 筆記",
+    "url": "https://hackmd.io/@yy933/HJoGM4bfGl"
+  },
+  {
+    "title": "[React] 渲染陣列清單：key 屬性- 筆記",
+    "url": "https://hackmd.io/@yy933/HkD_XRJGzx"
+  },
+  {
+    "title": "未命名文章",
+    "url": "https://hackmd.io/@yy933/SJp_X0kGMl"
+  },
+  {
+    "title": "React 語法糖：JSX - 筆記",
+    "url": "https://hackmd.io/@yy933/rJgW2XJC1ll"
+  },
+  {
+    "title": "[React][Vite] 為什麼 Vite 預設在 main.jsx 引入 CSS，而非 index.html？ - 筆記",
+    "url": "https://hackmd.io/@yy933/BklfrbObGe"
+  },
+  {
+    "title": "[React.js]  React 的特性：聲明式（Declarative）與可組合性（Composable）",
+    "url": "https://hackmd.io/@yy933/Bk4GjqPbzg"
+  },
+  {
+    "title": "[Express.js] Express Session - 筆記",
+    "url": "https://hackmd.io/@yy933/r1hT7P8-fg"
+  },
+  {
+    "title": "[Express.js] Express Middleware - 筆記",
+    "url": "https://hackmd.io/@yy933/ByaP1dSbMg"
+  },
+  {
+    "title": "[Database] 資料庫的核心防禦機制：Transaction、Commit 與 Rollback - 筆記",
+    "url": "https://hackmd.io/@yy933/rywGnVBZGe"
+  },
+  {
+    "title": "SQL：sqlite3的常用方法- 筆記",
+    "url": "https://hackmd.io/@yy933/S1E2a14bzg"
+  },
+  {
+    "title": "Cross-Origin Resource Sharing (CORS) - 筆記",
+    "url": "https://hackmd.io/@yy933/B1WnfflbMl"
+  },
+  {
+    "title": "[Node.js] 模組系統：CommonJS (CJS) vs ES Module (ESM) - 筆記",
+    "url": "https://hackmd.io/@yy933/r1nXzTCxGe"
+  },
+  {
+    "title": "[Database] SQL：UNION - 筆記",
+    "url": "https://hackmd.io/@yy933/BJVDA_CgMx"
+  },
+  {
+    "title": "[Database] SQL Injection - 筆記",
+    "url": "https://hackmd.io/@yy933/B18byE6eGx"
+  },
+  {
+    "title": "[Database] SQL 基礎：DDL(Data Definition Language) 與 DML(Data Manipulation Language) - 筆記",
+    "url": "https://hackmd.io/@yy933/SJZqxE3gze"
+  },
+  {
+    "title": "[Database] SQL JOIN - 筆記",
+    "url": "https://hackmd.io/@yy933/Sy14Jzheze"
+  },
+  {
+    "title": "[AI Engineering]  使用 Groq 串接LLM API",
+    "url": "https://hackmd.io/@yy933/H1UuA_UgMx"
+  },
+  {
+    "title": "Prisma整合Next.js：建立使用者註冊與登入基本流程 - cheatsheet",
+    "url": "https://hackmd.io/@yy933/BkNo5PR5ge"
+  },
+  {
+    "title": "連線資料庫及建立Model的步驟(MongoDB) - 筆記",
+    "url": "https://hackmd.io/@yy933/HJu5lkwYo"
+  },
+  {
+    "title": "Server-Sent Events - 筆記",
+    "url": "https://hackmd.io/@yy933/Hy6D7cblzg"
+  },
+  {
+    "title": "[Node.js] Event Emitter - 筆記",
+    "url": "https://hackmd.io/@yy933/HJznOSbxzg"
+  },
+  {
+    "title": "[Next.js] [Authentication] 使用NextAuth進行驗證- 筆記",
+    "url": "https://hackmd.io/@yy933/SJvVTmp5xl"
+  },
+  {
+    "title": "[Issues] Prisma migration卻找不到.env中的DATABASE_URL? - 筆記",
+    "url": "https://hackmd.io/@yy933/By1ezU5jel"
+  },
+  {
+    "title": "npx prisma migrate dev & npx prisma db push",
+    "url": "https://hackmd.io/@yy933/r10K-vqjgg"
+  },
+  {
+    "title": "[Next.js] [Authentication] 使用NextAuth整合Google OAuth進行登入驗證- 筆記",
+    "url": "https://hackmd.io/@yy933/H1qLMLdile"
+  },
+  {
+    "title": "Next.js Routing - Middleware",
+    "url": "https://hackmd.io/@yy933/r1IG9zligx"
+  },
+  {
+    "title": "利用指令建立Express專案的步驟 - 筆記",
+    "url": "https://hackmd.io/@yy933/HyOQDaC9xe"
+  },
+  {
+    "title": "利用Docker建立本地PostgreSQL - cheatsheet",
+    "url": "https://hackmd.io/@yy933/BJuBMT6qlx"
+  },
+  {
+    "title": "[React/Next.js]  常見小技巧清單",
+    "url": "https://hackmd.io/@yy933/HynIfAqtxx"
+  },
+  {
+    "title": "[React - Next.js][TypeScript] 表單驗證 React-hook-form, zod - 筆記",
+    "url": "https://hackmd.io/@yy933/BkgWgXqSgx"
+  },
+  {
+    "title": "[React - Next.js][單元測試][Shadcn/ui] 使用 shadcn/ui 撰寫元件時，如何有效撰寫單元測試 - 筆記",
+    "url": "https://hackmd.io/@yy933/rkVDzVMSxl"
+  },
+  {
+    "title": "[React - Next.js] Hydration Fail - 筆記",
+    "url": "https://hackmd.io/@yy933/rJsfgzVXeg"
+  },
+  {
+    "title": "[React - Next.js] useRouter() - 筆記",
+    "url": "https://hackmd.io/@yy933/S1g4o1CMxl"
+  },
+  {
+    "title": "[TypeScript] Optional Chaining & Nullish Coalescing  - 筆記",
+    "url": "https://hackmd.io/@yy933/HJn9JiTfxe"
+  },
+  {
+    "title": "[TypeScript] Generics (泛型)  - 筆記",
+    "url": "https://hackmd.io/@yy933/rkCcSlsMgx"
+  },
+  {
+    "title": "[TypeScript] 函式（Function） - 筆記",
+    "url": "https://hackmd.io/@yy933/ByUHyjHMll"
+  },
+  {
+    "title": "[TypeScript] 型別系統：Union、Intersection、Literal、Alias - 筆記",
+    "url": "https://hackmd.io/@yy933/SJCzMcrfxg"
+  },
+  {
+    "title": "[TypeScript] 陣列型別（Array Type） - 筆記",
+    "url": "https://hackmd.io/@yy933/B1RIHQEzgx"
+  },
+  {
+    "title": "[TypeScript] 自定義型別（Custom Types） - 筆記",
+    "url": "https://hackmd.io/@yy933/rkn7F-4fgg"
+  },
+  {
+    "title": "[React - Next.js] 在本地環境建立 Next.js 開發環境 - 筆記",
+    "url": "https://hackmd.io/@yy933/BkEhea6blg"
+  },
+  {
+    "title": "[TypeScript] Defensive Programming (防禦式程式設計) - 筆記",
+    "url": "https://hackmd.io/@yy933/r1brKlQMgl"
+  },
+  {
+    "title": "[React - Next.js] Next.js 中的動態路由（Dynamic Routes） - 筆記",
+    "url": "https://hackmd.io/@yy933/Bkg-ZoZflx"
+  },
+  {
+    "title": "[React - Next.js] Next.js 中的連結 (Link) - 筆記",
+    "url": "https://hackmd.io/@yy933/BkP5Ew-zxx"
+  },
+  {
+    "title": "[React] 在本地環境用Vite建立 React.js 開發環境 - 筆記",
+    "url": "https://hackmd.io/@yy933/ByKBPQLyxe"
+  },
+  {
+    "title": "[React] useEffect - 筆記",
+    "url": "https://hackmd.io/@yy933/Hkl29A-Zel"
+  },
+  {
+    "title": "[React] 到底什麼時候需要 useEffect ? - 筆記",
+    "url": "https://hackmd.io/@yy933/HJ5Zt8u-gl"
+  },
+  {
+    "title": "[React] useRef - 筆記",
+    "url": "https://hackmd.io/@yy933/ryfmizX-gl"
+  },
+  {
+    "title": "[React] 設計與管理 state 結構 - 筆記",
+    "url": "https://hackmd.io/@yy933/rk9RErlbeg"
+  },
+  {
+    "title": "[React] 用 useState 管理 UI - 筆記",
+    "url": "https://hackmd.io/@yy933/r1e96CKxxe"
+  },
+  {
+    "title": "[React] useEffect 重要觀念回顧- 筆記",
+    "url": "https://hackmd.io/@yy933/ryjVTe7Wgl"
+  },
+  {
+    "title": "[React] 表單（form）細節回顧 - 筆記",
+    "url": "https://hackmd.io/@yy933/Bker7boleg"
+  },
+  {
+    "title": "[React] React中的事件處理（Event Handling） - 筆記",
+    "url": "https://hackmd.io/@yy933/BJcYzTFelx"
+  },
+  {
+    "title": "[React] 使用 props 向下傳遞資料 - 筆記",
+    "url": "https://hackmd.io/@yy933/Bk-iRZ0Jlg"
+  },
+  {
+    "title": "[React] Pure Function - 筆記",
+    "url": "https://hackmd.io/@yy933/H1FnO7zgeg"
+  },
+  {
+    "title": "[CSS] [Grid] auto-fit vs auto-fill - 筆記",
+    "url": "https://hackmd.io/@yy933/S1X-qLj0ye"
+  },
+  {
+    "title": "[React] 概念回顧 Part1 (React元件、JSX) - 筆記",
+    "url": "https://hackmd.io/@yy933/rJFB7gzegg"
+  },
+  {
+    "title": "[React] 概念回顧 Part2 (條件渲染、渲染清單、Pure function) - 筆記",
+    "url": "https://hackmd.io/@yy933/r1Gd4THexx"
+  },
+  {
+    "title": "[React] 管理渲染清單 (Rendering Lists)  - 筆記",
+    "url": "https://hackmd.io/@yy933/rkOhjlMggg"
+  },
+  {
+    "title": "[React] 條件渲染 (Conditional Rendering) - 筆記",
+    "url": "https://hackmd.io/@yy933/S1Gnh7Jxlg"
+  },
+  {
+    "title": "在 JSX 中使用 JavaScript - 筆記",
+    "url": "https://hackmd.io/@yy933/Skblsk0Jxe"
+  },
+  {
+    "title": "匯出與匯入 React 元件 - 筆記",
+    "url": "https://hackmd.io/@yy933/ryTcwRpkeg"
+  },
+  {
+    "title": "React 元件 - 筆記",
+    "url": "https://hackmd.io/@yy933/S1MEpA2kex"
+  },
+  {
+    "title": "Async/Await 語法糖 - 筆記",
+    "url": "https://hackmd.io/@yy933/HkQpBahkgx"
+  },
+  {
+    "title": "Promise.all - 筆記",
+    "url": "https://hackmd.io/@yy933/r1zU-ankxe"
+  },
+  {
+    "title": "Promise 封裝 - 筆記",
+    "url": "https://hackmd.io/@yy933/SyQHrn31ee"
+  },
+  {
+    "title": "未命名文章",
+    "url": "https://hackmd.io/@yy933/rkYBMHDJex"
+  },
+  {
+    "title": "在Express專案中使用樣板引擎Handlebars - 筆記",
+    "url": "https://hackmd.io/@yy933/rkQI9Jr1ex"
+  },
+  {
+    "title": "在Express專案中載入靜態檔案 - 筆記",
+    "url": "https://hackmd.io/@yy933/rJ7pr4Sygl"
+  },
+  {
+    "title": "[專案] 網紅廣告平台切版練習基礎設定 - 筆記",
+    "url": "https://hackmd.io/@yy933/rJCwety1gl"
+  },
+  {
+    "title": "[Node.js] 使用webpack建立Sass本地編譯環境",
+    "url": "https://hackmd.io/@yy933/Sks-N_IZa"
+  },
+  {
+    "title": " BEM 命名原則與 Sass 搭配 - 筆記",
+    "url": "https://hackmd.io/@yy933/HJAEJUCCJx"
+  },
+  {
+    "title": "Sass 核心語法 - 筆記",
+    "url": "https://hackmd.io/@yy933/B13g4BRA1g"
+  },
+  {
+    "title": "Sass 編譯：指令列實作 - 筆記",
+    "url": "https://hackmd.io/@yy933/HJKqXWACJl"
+  },
+  {
+    "title": "[CSS] Grid 佈局系統 - 筆記",
+    "url": "https://hackmd.io/@yy933/S1fAzNI0kl"
+  },
+  {
+    "title": "[CSS] 偽元素 vs 偽類 - 筆記",
+    "url": "https://hackmd.io/@yy933/H1wMpELRkl"
+  },
+  {
+    "title": " CSS 樣式來源 - 筆記",
+    "url": "https://hackmd.io/@yy933/BkKy8QSC1e"
+  },
+  {
+    "title": "JavaScript 資料型別檢查表 (錯誤處理) - 筆記",
+    "url": "https://hackmd.io/@yy933/S1Z8b6NRyl"
+  },
+  {
+    "title": "動態路由 (Route Params) 和 查詢字串 (Query String) - 筆記",
+    "url": "https://hackmd.io/@yy933/rkyaSdcTkl"
+  },
+  {
+    "title": "未命名文章",
+    "url": "https://hackmd.io/@yy933/HJiInj7R1x"
+  },
+  {
+    "title": "利用指令建立Express專案的步驟 - 筆記",
+    "url": "https://hackmd.io/@yy933/BJR_v_K_j"
+  },
+  {
+    "title": "Library & Framework  - 筆記",
+    "url": "https://hackmd.io/@yy933/Syc4QNK61x"
+  },
+  {
+    "title": " 軟體設計模式：Model-View-Controller  - 筆記",
+    "url": "https://hackmd.io/@yy933/S1m7xVF6kx"
+  },
+  {
+    "title": "建立 Node.js 伺服器 - 筆記",
+    "url": "https://hackmd.io/@yy933/SkMyc7Fp1l"
+  },
+  {
+    "title": "Event Loop Note",
+    "url": "https://hackmd.io/@yy933/Sk2ETu_Di"
+  },
+  {
+    "title": "Array.from()的用法 - 筆記",
+    "url": "https://hackmd.io/@yy933/ryOJZml21g"
+  },
+  {
+    "title": "document.createDocumentFragment() 如何減少 DOM 操作並提高效能？ - 筆記",
+    "url": "https://hackmd.io/@yy933/Skx9-P49kg"
+  },
+  {
+    "title": "for...of 和 for...in 迭代器的差別 - 筆記",
+    "url": "https://hackmd.io/@yy933/H196w2Hckg"
+  },
+  {
+    "title": "JavaScript 的同步與非同步觀念 - 筆記",
+    "url": "https://hackmd.io/@yy933/S1vc7awTj"
+  },
+  {
+    "title": "瀏覽器渲染流程與DOM - 筆記",
+    "url": "https://hackmd.io/@yy933/Hk8y7gcYye"
+  },
+  {
+    "title": "利用JavaScript操作DOM Tree - 筆記",
+    "url": "https://hackmd.io/@yy933/S1O0CfjK1g"
+  },
+  {
+    "title": "應用Redis在Node.js中實作快取(Cache) - 筆記",
+    "url": "https://hackmd.io/@yy933/HkUTVvQT2"
+  },
+  {
+    "title": "[Node.js] 連線資料庫及建立Model的步驟(MySQL) - 筆記",
+    "url": "https://hackmd.io/@yy933/SkanZHU0o"
+  },
+  {
+    "title": "Cross-Site Request Forgery (CSRF) - 筆記",
+    "url": "https://hackmd.io/@yy933/SJHvRS4G3"
+  },
+  {
+    "title": "關聯式資料庫(RDBMS)與非關聯式資料庫(NoSQL)的比較 - 筆記",
+    "url": "https://hackmd.io/@yy933/BJvQBPUf2"
+  },
+  {
+    "title": "[Node.js] 用 Nodemailer 寄信 - 筆記",
+    "url": "https://hackmd.io/@yy933/Hy9rKyAE3"
+  },
+  {
+    "title": "如何把專案部署到Railway上 - 筆記",
+    "url": "https://hackmd.io/@yy933/HyuwNxYXh"
+  },
+  {
+    "title": "Cookie & Session - 筆記",
+    "url": "https://hackmd.io/@yy933/ryWRxZCns"
+  },
+  {
+    "title": "面試題 - async & defer",
+    "url": "https://hackmd.io/@yy933/rJXHQJ4f3"
+  },
+  {
+    "title": "JWT 驗證機制 - 筆記",
+    "url": "https://hackmd.io/@yy933/Sy50KyJen"
+  },
+  {
+    "title": "快取(Cache)機制 - 筆記",
+    "url": "https://hackmd.io/@yy933/SkKN4On23"
+  },
+  {
+    "title": "[Node.js]利用Google Sheets API操作Google試算表",
+    "url": "https://hackmd.io/@yy933/SkbnlqhT3"
+  },
+  {
+    "title": "JavaScript的constructor",
+    "url": "https://hackmd.io/@yy933/B1MGs4Tni"
+  },
+  {
+    "title": "HTTP Headers - 筆記",
+    "url": "https://hackmd.io/@yy933/rkO7KSZGn"
+  },
+  {
+    "title": "JavaScript的原型繼承(Prototypal Inheritance)",
+    "url": "https://hackmd.io/@yy933/HkcySOHCn"
+  },
+  {
+    "title": "JavaScript的柯里化(Currying in JavaScript)",
+    "url": "https://hackmd.io/@yy933/B1Dc1MAAn"
+  },
+  {
+    "title": "短網址產生器 - 實作筆記",
+    "url": "https://hackmd.io/@yy933/r1tHop5Kj"
+  },
+  {
+    "title": "關於 RESTful API - 筆記",
+    "url": "https://hackmd.io/@yy933/Hk66q7c3j"
+  },
+  {
+    "title": "Node.js+Express+Passport.js 實作Twitter快速登入 - 筆記",
+    "url": "https://hackmd.io/@yy933/BJx366g8h"
+  },
+  {
+    "title": "Untitled",
+    "url": "https://hackmd.io/@yy933/B1rRkQuG3"
+  },
+  {
+    "title": "Simple Twitter專案開發過程反思",
+    "url": "https://hackmd.io/@yy933/HJbL2nkf3"
+  },
+  {
+    "title": "介紹專案 - 家庭記帳本",
+    "url": "https://hackmd.io/@yy933/HJZ08sk0o"
+  },
+  {
+    "title": "Alpha Camp 完課心得",
+    "url": "https://hackmd.io/@yy933/ByCGHMZM2"
+  },
+  {
+    "title": "Alpha Camp 2-2課程心得",
+    "url": "https://hackmd.io/@yy933/SJv72RODi"
+  },
+  {
+    "title": "「在瀏覽器輸入一個網址，按下 ENTER，瀏覽器刷新、顯示出網頁」背後發生的事 - 筆記",
+    "url": "https://hackmd.io/@yy933/rkW_6bodi"
+  }
+]
