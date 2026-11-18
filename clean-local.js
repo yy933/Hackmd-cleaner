@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-const https = require("https"); 
+const https = require("https");
 const { execSync } = require("child_process");
 
-// =================== 🛠️ 配置你的路徑 ===================
+// =================== 🛠️ Configure Your Paths ===================
 const SOURCE_DIR = "./my_notes";
 const OUTPUT_DIR = "../technote-blog-astropaper/src/content/posts";
-const IMAGE_OUTPUT_DIR = "../technote-blog-astropaper/public/images"; // 👈 新增：Astro 公共圖片存放區
+const IMAGE_OUTPUT_DIR = "../technote-blog-astropaper/public/images"; // 👈 New: Astro public images directory
 // =====================================================
 
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -16,21 +16,21 @@ if (!fs.existsSync(IMAGE_OUTPUT_DIR)) {
   fs.mkdirSync(IMAGE_OUTPUT_DIR, { recursive: true });
 }
 
-// 💡 利用系統 curl 強制突破 403 防盜鏈與 302 轉址
+// 💡 Use system curl to forcefully bypass 403 hotlinking protection and 302 redirects
 function downloadImageSync(url, destPath) {
   return new Promise((resolve, reject) => {
     try {
-      // ⚠️ 這裡構建 curl 指令：
-      // -L: 自動跟隨 301/302 轉址
-      // -s: 靜音模式，不噴進度條
-      // -H: 偽裝成從 HackMD 內部點開圖片的（突破 403 關鍵！）
-      // -A: 頂配 Chrome 瀏覽器特徵
+      // ⚠️ Constructing the curl command:
+      // -L: Follow 301/302 redirects automatically
+      // -s: Silent mode, hide progress bar
+      // -H: Disguise as opening the image directly from within HackMD (crucial for bypassing 403!)
+      // -A: Top-tier Chrome browser user-agent
       const command = `curl -L -s -H "Referer: https://hackmd.io/" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" "${url}" -o "${destPath}"`;
 
-      // 執行指令
+      // Execute command
       execSync(command, { stdio: "ignore" });
 
-      // 檢查檔案是否真的下載成功且有內容
+      // Verify if the file is successfully downloaded and has content
       if (fs.existsSync(destPath) && fs.statSync(destPath).size > 0) {
         resolve();
       } else {
@@ -52,7 +52,7 @@ async function main() {
     const catalogPath = path.join(__dirname, "./hackmd_catalog.json");
 
     // =================================================================
-    // 📊 階段一：讀取下載好的地圖 JSON，建立對照
+    // 📊 Phase 1: Read the downloaded map JSON and build the dictionary
     // =================================================================
     if (fs.existsSync(catalogPath)) {
       const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf-8"));
@@ -81,7 +81,7 @@ async function main() {
     }
 
     // =================================================================
-    // 🚀 階段二：開始清洗文章與「全自動下載圖片」
+    // 🚀 Phase 2: Start cleaning articles and "fully automated image downloading"
     // =================================================================
     let processedCount = 0;
     let skippedCount = 0;
@@ -98,7 +98,7 @@ async function main() {
 
       let content = fs.readFileSync(filePath, "utf-8");
 
-      // --- 1. 提取並解析 HackMD 既有的 Frontmatter ---
+      // --- 1. Extract and parse HackMD's existing Frontmatter ---
       let title = filename.replace(".md", "");
       let tags = ["others"];
       const yamlMatch = content.match(/^---\s*([\s\S]*?)\s*---/);
@@ -117,7 +117,7 @@ async function main() {
       }
       if (tags.length === 0) tags = ["others"];
 
-      // --- 2. 淨化內文與修正 Shiki 語法highlight ---
+      // --- 2. Clean content and fix Shiki syntax highlighting ---
       content = content.replace(/^#\s+.+$/m, "").trim();
       content = content.replace(/^######\s+tags:.*$/gm, "").trim();
       content = content
@@ -134,48 +134,48 @@ async function main() {
         "![$1]($2)",
       );
 
-      // 💡 步驟 A：【先執行】換行救星（此時內文還是純粹的 ::: info 狀態，沒有 HTML 標籤干擾）
-      // 我們多排除一個冒號「:」，確保 ::: 警示框的開頭結尾行不會被誤塞空白鍵
+      // 💡 Step A: [Execute First] Line break savior (content is still in pure ::: info state here, free of HTML tag interference)
+      // Exclude colons ":" to ensure the opening and closing lines of ::: warning boxes are not incorrectly padded with spaces
       const blocks = content.split(/(```[\s\S]*?```)/g);
       content = blocks
         .map((block) => {
           if (block.startsWith("```")) return block;
-          // 排除開頭是 #, -, >, *, +, :, <, 或是空白與空行的換行
+          // Exclude line breaks preceded by #, -, >, *, +, :, <, or whitespace and empty lines
           return block.replace(/([^\n])\n([^\n>*\-+#\s:<])/g, "$1  \n$2");
         })
         .join("");
 
-      // 步驟 B：【再執行】原本的程式碼區塊語言修正
+      // Step B: [Execute Second] Original code block language fix
       content = content.replace(/^```(\w+)(=[^\n]*)?/gm, (match, p1) => {
         let lang = p1.toLowerCase();
         if (lang === "env") lang = "bash";
         return `\`\`\`${lang}`;
       });
 
-      // --- 🌟 新增：全自動捕捉內文的 HackMD 圖片並下載到本地 🌟 ---
+      // --- 🌟 New: Fully automatic capture of HackMD images in content and download locally 🌟 ---
       const hackmdImgRegex =
         /https:\/\/hackmd\.io\/_uploads\/[A-Za-z0-9\-_]+\.(?:png|jpg|jpeg|gif|webp)/g;
       const imageUrls = content.match(hackmdImgRegex) || [];
 
       for (const remoteUrl of imageUrls) {
         const urlParts = remoteUrl.split("/");
-        const imgName = urlParts[urlParts.length - 1]; // 取得類似 Sk6PPMRCkg.png 的檔名
+        const imgName = urlParts[urlParts.length - 1]; // Get file name like Sk6PPMRCkg.png
         const localImgPath = path.join(IMAGE_OUTPUT_DIR, imgName);
 
         try {
-          // 如果圖片還沒下載過，才執行下載
+          // Download only if the image hasn't been downloaded yet
           if (!fs.existsSync(localImgPath)) {
             console.log(`📥 正在下載圖片: ${imgName} ...`);
             await downloadImageSync(remoteUrl, localImgPath);
           }
-          // 將內文的遠端網址替換成 Astro 的本地相對路徑
+          // Replace remote URL in content with Astro's local relative path
           content = content.split(remoteUrl).join(`/images/${imgName}`);
         } catch (imgErr) {
           console.error(`❌ 圖片下載失敗 (${remoteUrl}):`, imgErr.message);
         }
       }
 
-      // --- 3. 利用地圖字典翻譯跨文章網址 ---
+      // --- 3. Translate cross-article URLs using the dictionary ---
       Object.keys(autoLinkDictionary).forEach((id) => {
         const hackMdUrlRegex = new RegExp(
           `https://hackmd\\.io/[^\\s\\)]*${id}[^\\s\\)]*`,
@@ -184,7 +184,7 @@ async function main() {
         content = content.replace(hackMdUrlRegex, autoLinkDictionary[id]);
       });
 
-      // --- 4. 轉換 ::: 警示框 ---
+      // --- 4. Transform ::: alert boxes ---
       content = content.replace(
         /:::\s*warning\s*\n([\s\S]*?)\n:::/g,
         (m, p1) =>
@@ -206,7 +206,7 @@ async function main() {
           `<blockquote class="my-6 p-4 bg-sky-50 dark:bg-sky-950/30 border-l-4 border-sky-500 rounded-r-md text-sky-900 dark:text-sky-200 blocknoted-fix">\n\n${p1}\n\n</blockquote>`,
       );
 
-      // --- 5. 生成符合 YAML 標準的 Frontmatter ---
+      // --- 5. Generate YAML-compliant Frontmatter ---
       const fileStat = fs.statSync(filePath);
       const fileBirthTime = fileStat.birthtime || fileStat.mtime;
       const fileModifyTime = fileStat.mtime;
@@ -269,5 +269,5 @@ async function main() {
   }
 }
 
-// 執行非同步主函式
+// Execute asynchronous main function
 main();

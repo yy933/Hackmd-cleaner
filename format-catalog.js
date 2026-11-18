@@ -50,9 +50,7 @@ async function fetchAndFormatCatalog() {
       .map((note) => {
         // Prioritize permalink or publishLink; fallback to constructing the URL with id
         let finalUrl = note.permalink || note.publishLink;
-        console.log(
-          `Permalink: ${note.permalink}, PublishLink: ${note.publishLink}, ShortId: ${note.shortId}, Id: ${note.id}, UserPath: ${note.userPath}`,
-        );
+
         if (!finalUrl && note.id) {
           finalUrl = `https://hackmd.io/${note.id}`;
         }
